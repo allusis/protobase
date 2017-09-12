@@ -11,6 +11,5 @@ readme.html
 .config.codekit
 node_modules
 bower_components
-config.codekit3
 sftp-config.json
 npm-debug.log
