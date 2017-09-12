@@ -1,0 +1,16 @@
+mixin grid(addon_class)
+  if addon_class
+    div(class= 'row ' + addon_class)
+      block
+  else
+    div(class= 'row')
+      block
+
+mixin grid-col(addon_class)
+  if addon_class
+    div(class= addon_class)
+      block
+  else
+    div
+      block
+

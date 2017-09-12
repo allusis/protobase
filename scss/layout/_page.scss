@@ -1,0 +1,25 @@
+// Wraps all layout content (header, content, footer)
+.site-wrap {
+
+}
+
+// Wraps page content and sidebars
+.page-wrap {
+  display:flex;
+  flex-wrap:wrap;
+  height:100%;
+}
+
+// Wraps just the page content
+.content-wrap {
+  flex:1;
+  @media (min-width:$screen-sm-ls) {
+    padding-left:$sidebar-width + $gap;
+  }
+}
+
+.content-wrap {
+  width:100%;
+  margin-left:auto;
+  margin-right:auto;
+}

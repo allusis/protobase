@@ -1,0 +1,28 @@
+//- Element Colors
+$gray-lt:                   #eee;
+$gray:                      #ddd;
+$gray-md:                   #999;
+$gray-dk:                   #222;
+
+$brand-primary:             #1589ee;
+$brand-secondary:           #64727B;
+
+$success:                   #93C461;
+$info:                      #5bc0de;
+$warning:                   #f0ad4e;
+$danger:                    #d9534f;
+
+//-- Document colors
+$page-bg:                   $gray-lt;
+
+$text-dark:                 $gray-dk;
+$text-color:                #444;
+$text-medium:               $gray-md;
+$text-light:                darken($gray,10%);
+
+$link-color:                $brand-primary;
+$link-active:               darken($brand-primary,10%);
+
+$border-default:            $gray;
+$border-lt:                 $gray-lt;
+

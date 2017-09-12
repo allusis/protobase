@@ -1,0 +1,11 @@
+each page,i in PrimaryNavItems
+  if currentPage === page.url
+    a(class="active", href= page.url + '.html')
+      svg(class='nav-icon', aria-hidden="true")
+        use(xlink:href= 'img/sprites/nav.svg#' + page.key, xmlns:xlink="http://www.w3.org/1999/xlink")
+      span.title= page.title
+  else
+    a(href= page.url + '.html')
+      svg(class='nav-icon', aria-hidden="true")
+        use(xlink:href= 'img/sprites/nav.svg#' + page.key, xmlns:xlink="http://www.w3.org/1999/xlink")
+      span.title= page.title

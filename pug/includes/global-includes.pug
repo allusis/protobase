@@ -1,0 +1,10 @@
+include ../components/buttons.pug
+include ../components/grid.pug
+include ../components/inputs.pug
+include ../components/media.pug
+include ../components/stencils.pug
+
+
+block variables
+  block PrimaryNavigation
+    - var PrimaryNavItems = [{'url':'home','title':'Home','img':'nav','key':'home'},{'url':'inputs','title':'Inputs','img':'nav','key':'inputs'},{'url':'buttons','title':'Buttons','img':'nav','key':'buttons'},{'url':'cards','title':'Cards','img':'nav','key':'cards'},{'url':'icons','title':'Icons','img':'nav','key':'icons'},{'url':'collapse','title':'Collapse','img':'nav','key':'collapse'}];

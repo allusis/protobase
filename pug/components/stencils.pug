@@ -1,0 +1,74 @@
+mixin stencilWrapper
+  .stencil-container
+    block
+
+mixin stencilTable(numberOfRows, addonClass)
+  if addonClass
+    div(class= 'stencil table ' + addonClass)
+      .st-row.header
+        .st-container
+          block
+      while tableRows < numberOfRows
+        .st-row
+          div(class= 'st-container ' + tableRows++)
+            block
+      - tableRows = 1;
+
+  else
+    .stencil.table
+      .st-row.header
+        .st-container
+          block
+      while tableRows < numberOfRows
+        .st-row
+          div(class= 'st-container ' + tableRows++)
+            block
+      - tableRows = 1;
+
+mixin stencilPerson(numberOfPersons, addonClass)
+  if addonClass
+    div(class= 'stencil person ' + addonClass)
+      while persons < numberOfPersons
+        div(class= 'st-container ' + persons++)
+          .circle
+          .content
+            .blocky
+            .blocky
+      - persons = 1;
+  else
+    .stencil.person
+      while persons < numberOfPersons
+        div(class= 'st-container ' + persons++)
+          .circle
+          .content
+            .blocky
+            .blocky
+      - persons = 1;
+
+
+mixin stencilList(numberOfRows, addonClass)
+  if addonClass
+    div(class= 'stencil list ' + addonClass)
+      .st-row.header
+        .st-container
+          .blocky
+          .blocky.add
+      while listRows < numberOfRows
+        .st-row.body
+          div(class= 'st-container ' + listRows++)
+            block
+      - listRows = 1;
+
+  else
+    .stencil.list
+      .st-row.header
+        .st-container
+          .blocky
+          .blocky.add
+      while listRows < numberOfRows
+        .st-row.body
+          div(class= 'st-container ' + listRows++)
+            block
+      - listRows = 1;
+
+

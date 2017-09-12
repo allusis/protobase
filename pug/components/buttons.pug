@@ -1,0 +1,24 @@
+mixin btn(btnElement, btnText, btnClass)
+  if btnText
+    #{btnElement}(class= 'btn ' + btnClass)&attributes(attributes)= btnText
+      block
+  else
+    #{btnElement}(class= 'btn ' + btnClass)&attributes(attributes)
+      block
+
+mixin dropdown(dropdown_id, dropdown_class, dropdown_label, has_caret)
+  if has_caret
+    div(class= 'dropdown has-caret ' + dropdown_class)
+      input(type="checkbox", name= dropdown_id, id= dropdown_id)
+      label(for= dropdown_id)
+        .title= dropdown_label
+        +svg-sprite("img/sprites/base.svg", "arrow-sort", "", "")
+      .dropdown-items
+        block
+  else
+    div(class= 'dropdown ' + dropdown_class)
+      input(type="checkbox", name= dropdown_id, id= dropdown_id)
+      label(for= dropdown_id)
+        .title= dropdown_label
+      .dropdown-items
+        block

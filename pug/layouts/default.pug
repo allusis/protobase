@@ -1,0 +1,40 @@
+include ../includes/global-includes.pug
+
+block variables
+  include ../partials/variables.pug
+
+block active_page
+  - var currentPage = 'home'
+
+doctype transitional
+html(lang="en", xmlns="http://www.w3.org/2000/svg", xmlns:xlink="http://www.w3.org/1999/xlink")
+  head
+    block base_url
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+    meta(name='description', content= pageDescription)
+    meta(name="theme-color", content= androidNavBG)
+    link(rel="icon", type= favIconType, href= favIcon)
+
+    block title
+      title= pageName + ' / ' + siteName
+
+    include ../partials/stylesheets.pug
+    block stylesheets
+
+  body
+    block modals
+    .site-wrap
+      include ../partials/header.pug
+      .page-wrap
+        block sidebar-left
+        .content-wrap
+          block content
+        block sidebar-right
+      footer.site-footer
+
+    include ../partials/scripts.pug
+
+    block scripts
+

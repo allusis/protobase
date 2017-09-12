@@ -1,0 +1,64 @@
+@mixin word-wrap {
+      word-break:  break-word;
+  -webkit-hyphens: auto;
+     -moz-hyphens: auto;
+          hyphens: auto;
+}
+
+@mixin ellipsis {
+  width: 100%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+@mixin font-smoothing {
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing:antialiased;
+          font-smoothing:antialiased;
+             font-smooth:always;
+}
+
+@mixin box($box-sizing) {
+  box-sizing:$box-sizing;
+}
+
+// Better than box-shadow for shadowing non-square shapes.
+@mixin drop-shadow($dropshadow) {
+  -webkit-filter:drop-shadow($dropshadow);
+     -moz-filter:drop-shadow($dropshadow);
+      -ms-filter:drop-shadow($dropshadow);
+          filter:drop-shadow($dropshadow);
+}
+
+@mixin vertical-align($position) {
+  position:$position;
+  top: 50%;
+  @include transform(translateY(-50%));
+}
+
+// Material-like shadowing
+@mixin shadow($level: 1) {
+  @if $level == 1 {box-shadow: 0 1px 3px rgba(#333,0.12), 0 1px 2px rgba(#333,0.24);}
+  @else if $level == 2 {box-shadow: 0 3px 6px rgba(#333,0.16), 0 3px 6px rgba(#333,0.23);}
+  @else if $level == 3 {box-shadow: 0 10px 20px rgba(#333,0.19), 0 6px 6px rgba(#333,0.23);}
+  @else if $level == 4 {box-shadow: 0 14px 28px rgba(#333,0.25), 0 10px 10px rgba(#333,0.22);}
+  @else if $level == 5 {box-shadow: 0 19px 38px rgba(#333,0.30), 0 15px 12px rgba(#333,0.22);}
+}
+
+@mixin font-regular {
+  font-weight:$weight-regular;
+}
+
+@mixin font-light {
+  font-weight:$weight-light;
+}
+
+@mixin font-semibold {
+  font-weight:$weight-semibold;
+}
+
+@mixin font-bold {
+  font-weight:$weight-bold;
+}

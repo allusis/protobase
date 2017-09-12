@@ -1,0 +1,33 @@
+extends ../layouts/default.pug
+
+block active_page
+  - var currentPage = 'home';
+
+block title
+  title Demo
+
+block stylesheets
+
+block content
+  h1 Aliquam dion sector cupiditate!
+
+  h2 Display Grid
+  .grid
+    .col test
+    .col test2
+    .col test3
+    .col test4
+
+  h2 Flexbox Grid
+  +grid
+    +grid-col("col-sm-3") col-sm-3
+    +grid-col("col-sm-3") col-sm-3
+
+block sidebar-left
+  .sidebar.left
+    nav.sidebar-nav
+      include ../partials/navigation-primary.pug
+
+block scripts
+
+

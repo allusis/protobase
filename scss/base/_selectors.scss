@@ -1,0 +1,68 @@
+html {
+  position:relative;
+  min-height:100%;
+  background:$page-bg;
+  font-size:14px;
+  @media (min-width:$screen-lg) {
+    font-size:16px;
+  }
+}
+
+body {
+  @include font-smoothing;
+  margin:0;
+  color:$text-color;
+  font-family:$font-regular;
+}
+
+a {
+  cursor:pointer;
+  transition:all 0.15s ease;
+  text-decoration:none;
+  &:hover,&:focus,&:active {
+    color:darken($brand-primary,15%);
+  }
+}
+
+hr {
+  height:2px;
+  padding:0;
+  margin:$gap 0;
+  background-color:rgba($gray,0.7);
+  border:0;
+}
+
+h1 {
+  font-size:2rem;
+  @include font-semibold;
+}
+h2 {
+  font-size:1.5rem;
+  @include font-semibold;
+}
+h3 {
+  font-size:1.25rem;
+  @include font-semibold;
+}
+h4 {
+  font-size:1.125rem;
+  @include font-semibold;
+}
+h5 {
+  font-size:1rem;
+  @include font-semibold;
+}
+h6 {
+  font-size:0.875rem;
+  @include font-semibold;
+  text-transform:uppercase;
+}
+
+strong {
+  @include font-semibold;
+}
+
+label {
+  font-weight:$weight-semibold;
+  color:#777;
+}

@@ -1,0 +1,58 @@
+mixin inputText(wrapClass, inputId, inputLabel, isRequired, errorId)
+  div(class= 'field-wrap ' + wrapClass)
+    label.field-label(for= inputId)
+    if isRequired
+      abbr.field-required(title='required') *
+      |= inputLabel
+    else
+      |= inputLabel
+    .input-wrap
+    if isRequired
+      input.input-text(id= inputId, type='text', required='', aria-describedby= errorId)&attributes(attributes)
+      .input-help(id= errorId)
+        block
+    else
+      input.input-text(id= inputId, type='text')&attributes(attributes)
+
+
+mixin textarea(wrapClass, inputId, inputLabel)
+  div(class= 'field-wrap ' + wrapClass)
+    if inputLabel
+      label.field-label(for= inputId)= inputLabel
+      .input-wrap
+        textarea(id= inputId)&attributes(attributes)
+          block
+    else
+      label.assistive-text(for= inputId)= inputLabel
+      .slds-form-element__control
+        textarea(id= inputId)&attributes(attributes)
+          block
+
+mixin select(wrapClass, inputId, inputLabel, labelClass)
+  div(class= 'field-wrap ' + wrapClass)
+    if inputLabel
+      label(for= inputId, class= 'field-label ' + labelClass)= inputLabel
+      .input-wrap
+        select(id= select_id)&attributes(attributes)
+          block
+    else
+      label.assistive-text(for= inputId)= inputLabel
+      .input-wrap
+        select(id= select_id)&attributes(attributes)
+          block
+
+mixin checkbox(wrapClass, inputId, inputName, inputLabel)
+  div(class= 'field-wrap ' + wrapClass)
+    label.checkbox-wrap(for= inputId)
+      input(id= inputId, type='checkbox', name= inputName)&attributes(attributes)
+      span.faux-checkbox
+      if inputLabel
+        span.check-label= inputLabel
+
+mixin radio(wrapClass, inputId, inputName, inputLabel)
+  div(class= 'field-wrap ' + wrapClass)
+    label.radio-wrap(for= inputId)
+      input(id= inputId, type='radio', name= inputName)&attributes(attributes)
+      span.faux-radio
+      if inputLabel
+        span.radio-label= inputLabel

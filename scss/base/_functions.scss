@@ -1,0 +1,21 @@
+// Convert px to em
+@function pxtoem($target, $context){
+  @return ($target/$context)+0em;
+}
+
+// Convert em to px
+@function emtopx($target, $context){
+  @return ($target*$context)+0px;
+}
+
+// Determine appropriate contrasting text color
+@function contrast-color($color) {
+  @if (lightness($color) > 75) {
+    // Lighter backgorund, return dark color
+    @return $text-color;
+  } @else {
+    // Darker background, return light color
+    @return white;
+  }
+}
+

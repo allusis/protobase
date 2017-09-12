@@ -1,0 +1,6 @@
+mixin svg-sprite(svgFile, svgClass, svgTitle)
+  svg(class=svgClass, aria-hidden="true", title=svgTitle, xmlns="http://www.w3.org/2000/svg", xmlns:xlink="http://www.w3.org/1999/xlink" )
+    use(xlink:href= svgFile)
+
+mixin img(imgUrl, imgClass, imgTitle, altText)
+  img(class=svgClass, aria-hidden="true", title=svgTitle, src= svgFile, alt=altText)

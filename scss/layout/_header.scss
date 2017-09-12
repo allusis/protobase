@@ -1,0 +1,24 @@
+header {
+  height:$gap-lg + $gap-sm;
+  background:white;
+  box-shadow: 0 2px 0 darken($gray-lt,5%);
+  align-items:center;
+  display:flex;
+  position:relative;
+  z-index:1;
+  .logo {
+    font-size:$gap;
+    padding-right:$gap;
+    padding-left:$gap;
+    @include font-semibold;
+  }
+  a {
+    padding:$gap-sm $gap;
+  }
+  nav {
+    @media (min-width:$screen-sm) {
+      margin-left:auto;
+    }
+  }
+}
+

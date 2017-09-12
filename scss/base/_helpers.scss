@@ -1,0 +1,11 @@
+.txt-underline {
+  text-decoration:underline;
+}
+
+.txt-semibold {
+  @include font-semibold;
+}
+
+.flex-all {
+  display:flex;
+}
