@@ -1,0 +1,18 @@
+{
+  "name": "protobase",
+  "description": "A collection of reusable prototyping snippets for rapidness",
+  "main": "index.html",
+  "authors": [
+    "Tony Montemorano"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/allusis/protobase",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

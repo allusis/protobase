@@ -1,0 +1,23 @@
+{
+  "name": "protobase",
+  "version": "0.0.1",
+  "description": "A collection of reusable prototyping snippets for rapidness",
+  "author": "Tony Montemorano",
+  "devDependencies": {
+    "browser-sync": "2.18.5",
+    "gulp": "~3.9.1",
+    "gulp-autoprefixer": "3.1.1",
+    "gulp-cache": "0.4.5",
+    "gulp-concat": "~2.6.1",
+    "gulp-imagemin": "3.1.1",
+    "gulp-plumber": "1.1.0",
+    "gulp-pug": "3.2.0",
+    "gulp-pug-inheritance": "^0.2.1",
+    "gulp-rename": "1.2.2",
+    "gulp-sass": "3.0.0",
+    "gulp-uglify": "~0.1.0"
+  },
+  "main": "index.html",
+  "repository": "https://github.com/allusis/protobase",
+  "license": "MIT"
+}
